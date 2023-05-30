@@ -35,16 +35,21 @@ function App() {
   return (
     <div className="container">
       <div className="nav">
-      <img src={logo} alt="Logo" />
-      <div className="left-items">
-        {navItems.map((item) => (
-          <a href={item.href} key={item.text}>{item.text}</a>
-        ))}
-        <button >Learn</button>
+        <img src={logo} alt="Logo" />
+        <div className="left-items">
+          {navItems.map((item) => (
+            <a href={item.href} key={item.text}>{item.text}</a>
+          ))}
+          <button >Learn</button>
+        </div>
       </div>
+      <div className="second-section">
+        <div className="overlay">
+          <h1 className="text">Developing your ideas into <span>reality</span></h1>
+          <p className="subtext">TechBySJ is your comprehensive destination for all things tech. We offer a wide range of technology skills and bootcamps, ensuring continuous connectivity and productivity through on-site and off-site services.</p>
+          <button>Get in touch</button>
+        </div>
       </div>
-
-
     </div>
   )
 }
