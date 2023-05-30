@@ -110,7 +110,8 @@ html {
     padding: 20px 40px;
     align-items: center;
     justify-content: space-between;
-    margin: 20px 0 15px 0;
+    background-color: white;
+      // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 0 solid #e5e7eb;
     box-sizing: border-box;
 
@@ -175,6 +176,7 @@ html {
     background-position: center;
     background-position: center;
     height: 100vh;
+    width: 100%;
     padding-bottom: 2rem;
     margin-top: 90px;
     -webkit-background-size: cover;
