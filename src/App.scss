@@ -96,25 +96,29 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 .container {
-  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   height: 100%;
   letter-spacing: 0.025em;
-  padding-left: 0;
+  padding: 0%;
+  margin: 0%;
   .nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 90px;
     z-index: 999;
     display: flex;
     padding: 20px 40px;
     align-items: center;
     justify-content: space-between;
     background-color: white;
-      // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border: 0 solid #e5e7eb;
     box-sizing: border-box;
-
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     img {
       width: 130px;
       height: 50px;
@@ -167,14 +171,12 @@ html {
   .second-section {
     // background-image: url('../src/assets/bg.jpeg'); url(https://images.unsplash.com/photo-1536104968055-4d61aa56f46a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60);
     background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.4)
+        to right,
+        rgba(2, 2, 70, 1),
+        rgba(255, 255, 255, 0)
       ),
-      url("../src/assets/bg.jpeg") no-repeat center center fixed;
+      url("../src/assets/bg.jpeg") no-repeat center center;
     background-size: cover;
-    background-position: center;
-    background-position: center;
     height: 100vh;
     width: 100%;
     padding-bottom: 2rem;
@@ -182,7 +184,6 @@ html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
 
     .overlay {
       position: absolute;
@@ -246,6 +247,262 @@ html {
         background-color: transparent;
         border-style: solid;
         border-radius: 0.25rem;
+      }
+    }
+  }
+  // about us section
+  .about-us {
+    padding-bottom: 2rem;
+    height: 100vh;
+    position: relative;
+    background-color: #f1f5f9;
+
+    h2 {
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      padding: 2.5rem;
+      margin: 0;
+    }
+    h3 {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      text-align: center;
+      padding: 1.5rem 1.5rem 0 1.5rem;
+      font-weight: inherit;
+    }
+    .image-container {
+      width: 100%;
+      height: 30rem;
+      border-radius: 0.5rem;
+      overflow: hidden; /* Ensure the image stays within the container */
+      position: relative;
+
+      img {
+        width: 75%;
+        display: block;
+        margin: 0 auto; /* Center the image horizontally */
+        border-radius: inherit; /* Inherit the rounded corners from the container */
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    .cards {
+      display: flex;
+      .card {
+        display: block;
+        background-color: #ffffff;
+        position: relative;
+        bottom: 3rem;
+        border-radius: 2rem;
+        padding: 2.5rem;
+        width: 480px;
+        left: 20rem;
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+          rgba(0, 0, 0, 0) 0px 0px 0px 0px,
+          rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+          rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+        box-sizing: border-box;
+        line-height: 24px;
+        .card-title {
+          display: flex;
+          color: #daa520;
+          text-align: center;
+          font-weight: 700;
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+          padding-bottom: 16px;
+          opacity: 1;
+
+          & > p:first-child {
+            margin: 0;
+          }
+        }
+      }
+      .card-one {
+        z-index: 1;
+      }
+      .card-two {
+        margin-right: 700px;
+      }
+    }
+  }
+  .services {
+    padding: 5rem 2rem;
+    .service-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.025rem;
+        font-weight: 700;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+          Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        width: 50%;
+        color: #041d38;
+        text-align: center;
+      }
+    }
+    .grid__cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem;
+
+      .grid-card {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 28rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        box-shadow: 0 2px 4px 0 rgba(6, 26, 125, 0.12),
+          0 2px 16px 0 rgba(6, 53, 238, 0.32);
+        padding: 2em;
+        .icon {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 2.4px 2.4px 3.2px rgba(0, 0, 0, 0.15);
+          width: 6rem;
+          height: 6rem;
+          opacity: 1;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+
+        h6 {
+          line-height: 1.25rem;
+          font-weight: 700;
+          font-size: 1.25rem;
+          margin-bottom: 0.75rem;
+        }
+        p {
+          font-size: 0.875rem;
+          line-height: 1.25rem;
+          margin-bottom: 0.75rem;
+          color: #011020;
+          text-align: center;
+        }
+        .btn-services {
+          align-items: center;
+          background-color: #0d0452;
+          border: 0;
+          border-radius: 12px;
+          box-shadow: 0 2px 4px 0 rgba(18, 196, 236, 0.12),
+            0 2px 16px 0 rgba(71, 103, 103, 0.32);
+          box-sizing: border-box;
+          color: #fff;
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 700;
+          padding: 10px 15px;
+          text-align: center;
+          touch-action: manipulation;
+          transition: 0.2s;
+          user-select: none;
+          -webkit-user-select: none;
+          width: 100%;
+
+          &:hover {
+            background-color: #f7b308;
+            color: #fff;
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+  .courses {
+    background-color: #111827;
+    width: 95%;
+    padding: 2.5rem 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+
+    .coursers-title {
+      h1 {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+    }
+    .grid-courses {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 3rem;
+
+      .grid-course {
+        padding: 32px;
+        line-height: 24px;
+        border: 2px solid rgb(147, 197, 253);
+        border-radius: 12px;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px;
+        box-sizing: border-box;
+        opacity: 1;
+        border-radius: 0.75rem;
+        -webkit-border-radius: 0.75rem;
+        -moz-border-radius: 0.75rem;
+        -ms-border-radius: 0.75rem;
+        -o-border-radius: 0.75rem;
+
+        .svg {
+          display: inline-block;
+
+          svg {
+            color: rgb(96, 165, 250);
+            display: block;
+            vertical-align: middle;
+          }
+        }
+        h1 {
+          font-weight: 600;
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+          text-transform: capitalize;
+          margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+          margin-top: calc(0.75rem * (1 - var(--tw-space-y-reverse)));
+        }
+        .btn-courses {
+          padding: 8px;
+          margin-top: 12px;
+          color: rgb(59, 130, 246);
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+
+          svg {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
       }
     }
   }
