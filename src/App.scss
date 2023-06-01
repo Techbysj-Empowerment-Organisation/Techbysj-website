@@ -94,6 +94,7 @@ html {
   font-family: "Poppins", sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
 }
 .container {
   display: flex;
@@ -136,9 +137,11 @@ html {
         font-weight: 600;
         font-size: 17px;
         letter-spacing: 0.025em;
-        :hover {
-          color: #805ad5; /* Text color on hover */
-        }
+        
+      }
+      a:hover {
+        cursor: pointer;
+        color: #805ad5; /* Text color on hover */
       }
       button {
         padding-left: 1.5rem;
